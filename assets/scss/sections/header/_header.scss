@@ -1,0 +1,51 @@
+.header {
+  min-height: 100vh;
+  background-color: $color-white;
+  .header-content {
+    display: grid;
+    grid-template-areas: "ttl img" "ds img" "act img" "nt img";
+    grid-template-columns: 550px 1fr;
+    padding-top: 125px;
+    padding-bottom: 160px;
+    row-gap: $gap;
+    &__title {
+      grid-area: ttl;
+      font-weight: 600;
+      font-size: 65px;
+      line-height: 70px;
+      margin: 0;
+      padding-bottom: 30px;
+      color: $color-black;
+    }
+    &__description {
+      grid-area: ds;
+      font-size: 25px;
+      line-height: 35px;
+      padding-right: 85px;
+      padding-bottom: 35px;
+      color: $color-black;
+    }
+    &__actions {
+      grid-area: act;
+      display: flex;
+      gap: $gap-sm;
+      margin-bottom: 5px;
+    }
+    &____btn {
+      min-height: 60px;
+      min-width: 160px;
+    }
+    &__note {
+      grid-area: nt;
+      line-height: 25px;
+      color: $color-black;
+    }
+    &__picture {
+      grid-area: img;
+      padding-top: 20px;
+    }
+    &__image {
+      width: 100%;
+    }
+  }
+}

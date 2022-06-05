@@ -1,0 +1,26 @@
+.container {
+  max-width: $xl;
+  padding-left: $gap;
+  padding-right: $gap;
+  margin: 0 auto;
+}
+.btn {
+  display: block;
+  padding: 1em;
+  min-width: 120px;
+  min-height: 45px;
+  border-radius: 0;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 16px;
+  font-weight: 600;
+}
+.btn--light {
+  background-color: $color-white;
+  border-color: rgba($color-black, 0.5);
+}
+.btn--accent {
+  background-color: $color-accent;
+  border-color: $color-accent;
+  color: $color-white;
+}

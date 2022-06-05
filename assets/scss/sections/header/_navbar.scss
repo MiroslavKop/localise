@@ -1,0 +1,93 @@
+.navbar {
+  border-bottom: 1px solid $color-border-navbar;
+  .container--navbar {
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+    padding-top: $gap-lg;
+    padding-bottom: $gap-lg;
+    max-height: 95px;
+  }
+
+  &__humburger {
+    width: 30px;
+    height: 22.5px;
+    position: relative;
+    margin: 25px auto;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    
+@include lg-min{
+  display: none;
+}
+
+
+    &-row {
+      position: absolute;
+      left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 3px;
+
+      transition: 0.25s ease-in-out;
+      transform: rotate(0deg);
+
+      opacity: 1;
+      border-radius: 3px;
+      background: $color-accent;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 9px;
+      }
+
+      &:nth-child(3) {
+        top: 18px;
+      }
+    }
+
+    &.open span {
+      &:nth-child(1) {
+        top: 9px;
+
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        left: -30px;
+
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 9px;
+
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-grow: 1;
+    @include xl-min {
+      gap: 60px;
+    }
+    @include xl-lg {
+      gap: $gap;
+    }
+    @include lg {
+      display: none;
+    }
+  }
+  &__actions {
+    display: flex;
+    gap: $gap-sm;
+  }
+}

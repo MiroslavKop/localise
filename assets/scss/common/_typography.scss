@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Graphik LCG', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: $color-black;
+}
