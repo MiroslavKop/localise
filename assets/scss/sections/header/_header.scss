@@ -1,51 +1,95 @@
 .header {
-  min-height: 100vh;
   background-color: $color-white;
-  .header-content {
-    display: grid;
-    grid-template-areas: "ttl img" "ds img" "act img" "nt img";
+  min-height: 100vh;
+}
+.header-content {
+  display: grid;
+  grid-template-areas: "ttl img" "ds img" "act img" "nt img";
+  row-gap: $gap;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include xl-min {
     grid-template-columns: 550px 1fr;
-    padding-top: 125px;
-    padding-bottom: 160px;
-    row-gap: $gap;
-    &__title {
-      grid-area: ttl;
-      font-weight: 600;
+  }
+  @include xl-lg {
+    grid-template-columns: 50% 1fr;
+  }
+  @include lg {
+    grid-template-columns: 1fr;
+    grid-template-areas: "ttl" "ds" "img" "act" "nt";
+  }
+  &__title {
+    grid-area: ttl;
+    font-weight: 600;
+    margin: 0;
+    color: $color-black;
+    @include xl-min {
       font-size: 65px;
       line-height: 70px;
-      margin: 0;
-      padding-bottom: 30px;
-      color: $color-black;
     }
-    &__description {
-      grid-area: ds;
+  }
+  &__description {
+    grid-area: ds;
+    line-height: 35px;
+
+    padding-bottom: 35px;
+    color: $color-black;
+    @include xl-min {
       font-size: 25px;
-      line-height: 35px;
       padding-right: 85px;
-      padding-bottom: 35px;
-      color: $color-black;
     }
-    &__actions {
-      grid-area: act;
-      display: flex;
-      gap: $gap-sm;
-      margin-bottom: 5px;
+    @include xl {
+      font-size: 20px;
     }
-    &____btn {
-      min-height: 60px;
+    @include lg-min {
+      padding-right: 70px;
+    }
+    @include lg {
+      text-align: center;
+    }
+  }
+  &__actions {
+    grid-area: act;
+    display: flex;
+    gap: $gap-sm;
+    margin-bottom: 5px;
+    @include lg {
+      justify-content: center;
+    }
+  }
+  &____btn {
+    min-height: 60px;
+    min-width: 160px;
+    @include sm-min {
       min-width: 160px;
     }
-    &__note {
-      grid-area: nt;
-      line-height: 25px;
-      color: $color-black;
+    @include sm {
+      min-width: 120px;
     }
-    &__picture {
-      grid-area: img;
-      padding-top: 20px;
+  }
+  &__note {
+    grid-area: nt;
+    line-height: 25px;
+    color: $color-black;
+    @include lg {
+      text-align: center;
     }
-    &__image {
+  }
+  &__picture {
+    grid-area: img;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__image {
+    @include lg-min {
       width: 100%;
+    }
+    @include lg-md {
+      width: 50%;
+    }
+    @include md {
+      width: 70%;
     }
   }
 }

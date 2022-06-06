@@ -8,12 +8,19 @@
   display: block;
   padding: 1em;
   min-width: 120px;
-  min-height: 45px;
+
   border-radius: 0;
   border-width: 1px;
   border-style: solid;
   font-size: 16px;
   font-weight: 600;
+  @include lg-min{
+    min-height: 45px;
+  }
+  @include lg {
+    min-height: 45px;
+    padding: 0.5em 1em;
+  }
 }
 .btn--light {
   background-color: $color-white;

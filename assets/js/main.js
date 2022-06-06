@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$('.navbar__humburger').click(function(){
-		$(this).toggleClass('open');
+		$(this).toggleClass('active');
+	$('.navbar__menu').fadeToggle('500');
 	});
 });
