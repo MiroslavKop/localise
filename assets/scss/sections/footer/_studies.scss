@@ -1,0 +1,49 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.studies {
+  display: flex;
+  flex-basis: 300px;
+  flex-direction: column;
+
+  gap: 15px;
+  @include xl {
+    align-items: center;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid $color-black;
+  }
+  &__title {
+    margin: 0;
+
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 50px;
+
+    @include lg {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  &__description {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    @include lg {
+      text-align: center;
+    }
+  }
+  &__link {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    &:hover {
+      transition: 0.5s;
+
+      color: $color-accent;
+    }
+  }
+}

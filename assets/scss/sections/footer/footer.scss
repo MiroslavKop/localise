@@ -1,0 +1,46 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer {
+  background-color: $color-background-footer;
+
+  @include xl-min {
+    padding-top: 95px;
+  }
+  @include xl {
+    padding-top: 30px;
+  }
+}
+.container--footer {
+  display: flex;
+
+  padding-bottom: 95px;
+
+  gap: 80px;
+  @include xl {
+    flex-direction: column;
+
+    gap: 40px;
+  }
+}
+.footer-nav {
+  display: flex;
+
+  gap: 50px;
+  @include xl-md {
+    justify-content: space-around;
+  }
+  @include md-sm {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  @include sm {
+    display: grid;
+
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}

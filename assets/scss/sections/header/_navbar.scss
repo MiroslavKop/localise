@@ -1,32 +1,46 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
 .navbar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+
   border-bottom: 1px solid $color-border-navbar;
+  background-color: $color-white;
+
   .container--navbar {
     display: flex;
-    column-gap: 50px;
     align-items: center;
+
+    max-height: 95px;
     padding-top: $gap-lg;
     padding-bottom: $gap-lg;
-    max-height: 95px;
-    @include sm {
+
+    column-gap: 50px;
+    @include md {
       flex-direction: column;
+
       max-height: 100%;
+
       gap: $gap-lg;
     }
   }
-
   &__humburger {
+    position: relative;
+
     width: 30px;
     height: 22.5px;
-    position: relative;
     margin: 0 auto;
-    transform: rotate(0deg);
-    transition: 0.5s ease-in-out;
+
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
 
     @include lg-min {
       display: none;
     }
-
     &-row {
       position: absolute;
       left: 0;
@@ -42,33 +56,27 @@
       opacity: 1;
       border-radius: 3px;
       background: $color-accent;
-
       &:nth-child(1) {
         top: 0;
       }
-
       &:nth-child(2) {
         top: 9px;
       }
-
       &:nth-child(3) {
         top: 18px;
       }
     }
-
     &.active span {
       &:nth-child(1) {
         top: 9px;
 
         transform: rotate(135deg);
       }
-
       &:nth-child(2) {
         left: -30px;
 
         opacity: 0;
       }
-
       &:nth-child(3) {
         top: 9px;
 
@@ -76,7 +84,6 @@
       }
     }
   }
-
   &__menu {
     @include xl-min {
       gap: $gap;
@@ -86,14 +93,18 @@
       flex-grow: 1;
     }
     @include lg {
-      display: none;
       position: absolute;
-      top: 11.5%;
-      text-align: center;
-      left: 0;
+      top: 100%;
       right: 0;
+      left: 0;
+
+      display: none;
+
+      text-align: center;
+
       background-color: rgb($color-white, 0.97);
       box-shadow: 0 5px 5px rgba($color-black, 0.5);
+
       @include sm {
         top: 220px;
       }
@@ -101,15 +112,50 @@
   }
   &__item {
     display: block;
+
     @include xl-min {
       padding: 0.5em $gap;
     }
     @include xl {
       padding: 10px;
     }
+    @include lg-min {
+      &:before {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+
+        width: 100%;
+        height: 2px;
+
+        content: "";
+        transform: scaleX(0);
+
+        background-color: $color-accent;
+      }
+      &:hover:before {
+        transition: transform 0.5s;
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
   }
   &__actions {
     display: flex;
+    justify-content: flex-end;
+
     gap: $gap-sm;
+    @include lg {
+      flex-basis: 10%;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+  }
+  &__logo {
+    @include lg {
+      flex-basis: 10%;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
   }
 }

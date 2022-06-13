@@ -1,0 +1,139 @@
+@use "../presets" as *;
+@use "mixins" as *;
+@use "mixins-media" as *;
+
+%job-article {
+  display: flex;
+
+  margin-top: 100px;
+  margin-bottom: 125px;
+
+  gap: $gap;
+  @include lg-min {
+    align-items: center;
+  }
+  @include lg {
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+  }
+  @include lg-md {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+%job-content {
+  flex-basis: 200px;
+  flex-grow: 1;
+}
+
+%job-title {
+  margin: 0;
+
+  font-weight: 600;
+  line-height: 1.2;
+
+  @include xl-min {
+    font-size: 50px;
+  }
+  @include xl-lg {
+    font-size: 40px;
+  }
+  @include lg {
+    font-size: 30px;
+  }
+}
+
+%job-description {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+%job-picture {
+  flex-basis: 200px;
+  flex-grow: 1;
+
+  background-color: $color-bg-light;
+
+  @include lg-min {
+    padding: 190px 95px;
+  }
+  @include lg {
+    padding: 50px;
+  }
+}
+
+%job-image {
+  width: 100%;
+
+  border-radius: 18px;
+  box-shadow: 0 0 10px rgba($color-black, 0.5);
+}
+
+%job-btn {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+%job-link {
+  display: inline-block;
+
+  border-bottom: 2px solid black;
+  &:hover {
+    transition: 0.25s;
+
+    border-bottom: 2px solid $color-accent;
+  }
+}
+
+%footer-nav-block {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  padding-top: 10px;
+
+  @include md {
+    align-items: center;
+
+    text-align: center;
+  }
+}
+%footer-nav-title {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 25px;
+}
+%footer-nav-list {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+
+  gap: 15px;
+}
+%footer-nav-link {
+  display: block;
+  &:before {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    content: "";
+    transform: scaleX(0);
+
+    background-color: $color-accent;
+  }
+  &:hover:before {
+    transition: transform 0.5s;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}

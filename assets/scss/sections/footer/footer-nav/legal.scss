@@ -1,0 +1,15 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.footer-nav__legal {
+  @extend %footer-nav-block;
+}
+.legal__title {
+  @extend %footer-nav-title;
+}
+.legal__list {
+  @extend %footer-nav-list;
+}
+.legal__link {
+  @extend %footer-nav-link;
+}

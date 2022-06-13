@@ -1,0 +1,39 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.control {
+  @extend %job-article;
+
+  &__content {
+    @extend %job-content;
+    @include ul-min {
+      padding-right: 160px;
+    }
+    @include ul-xl {
+      padding-right: 60px;
+    }
+  }
+
+  &__title {
+    @extend %job-title;
+  }
+
+  &__description {
+    @extend %job-description;
+  }
+
+  &__picture {
+    @extend %job-picture;
+  }
+
+  &__image {
+    @extend %job-image;
+  }
+
+  &__btn {
+    @extend %job-btn;
+  }
+  &__link {
+    @extend %job-link;
+  }
+}

@@ -1,0 +1,73 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+.popular-soft {
+  background-color: $color-background-soft;
+  .container--popular-soft {
+    display: flex;
+    align-items: center;
+
+    padding-top: 80px;
+    padding-bottom: 85px;
+
+    @include xl {
+      align-items: center;
+      flex-direction: column;
+
+      text-align: center;
+    }
+    @include sm {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  &__main {
+    display: flex;
+    align-items: center;
+
+    @include xl-min {
+      flex-basis: 800px;
+
+      border-right: 1px solid $color-black;
+
+      gap: 65px;
+    }
+    @include xl {
+      flex-direction: column-reverse;
+
+      padding-bottom: 15px;
+
+      border-bottom: 1px solid $color-black;
+    }
+  }
+  &__title {
+    color: $color-black;
+
+    font-size: 35px;
+    line-height: 50px;
+  }
+  &__quality {
+    display: flex;
+
+    @include xl-min {
+      padding-left: 50px;
+
+      gap: 50px;
+    }
+    @include xl {
+      padding-top: 20px;
+
+      gap: 150px;
+    }
+    @include sm {
+      flex-direction: column;
+
+      gap: 30px;
+    }
+  }
+  &__raiting {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+}

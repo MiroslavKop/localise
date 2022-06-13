@@ -1,0 +1,63 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+.opportunities {
+  padding-top: 120px;
+  padding-bottom: 150px;
+
+  background-color: $color-bg-light;
+  &__title {
+    margin: 0 0 80px;
+  }
+  &__content {
+    display: grid;
+
+    @include xl-min {
+      gap: 50px 90px;
+    }
+    @include xl {
+      gap: $gap * 2;
+    }
+    @include lg-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include lg-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .opportunity-item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      text-align: center;
+
+      &__title {
+        color: $color-black;
+
+        font-size: 25px;
+        line-height: 35px;
+      }
+      &__description {
+        margin: 0;
+
+        color: $color-black;
+
+        font-size: 18px;
+        line-height: 25px;
+      }
+      &__link {
+        display: inline-block;
+
+        border-bottom: 2px solid black;
+        &:hover {
+          transition: 0.25s;
+
+          border-bottom: 2px solid $color-accent;
+        }
+      }
+      &__picture {
+        order: -1;
+      }
+    }
+  }
+}

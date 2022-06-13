@@ -1,33 +1,54 @@
+@use "../presets" as *;
+@use "../mixins" as *;
 .container {
   max-width: $xl;
-  padding-left: $gap;
-  padding-right: $gap;
   margin: 0 auto;
+  padding-right: $gap;
+  padding-left: $gap;
 }
 .btn {
   display: block;
-  padding: 1em;
-  min-width: 120px;
 
-  border-radius: 0;
+  padding: 1em;
+
+  cursor: pointer;
+
   border-width: 1px;
   border-style: solid;
+  border-radius: 0;
+
   font-size: 16px;
   font-weight: 600;
-  @include lg-min{
+
+  @include lg-min {
     min-height: 45px;
   }
   @include lg {
     min-height: 45px;
     padding: 0.5em 1em;
   }
+  &:hover {
+    transition-duration: 0.5s;
+
+    box-shadow: inset 0 0 0 5px;
+  }
 }
 .btn--light {
-  background-color: $color-white;
+  min-width: 120px;
+
   border-color: rgba($color-black, 0.5);
+  background-color: $color-white;
 }
 .btn--accent {
-  background-color: $color-accent;
-  border-color: $color-accent;
+  min-width: 120px;
+
   color: $color-white;
+  border-color: $color-accent;
+  background-color: $color-accent;
+}
+.btn--dark {
+  min-width: 160px;
+
+  color: $color-white;
+  background-color: $color-black;
 }

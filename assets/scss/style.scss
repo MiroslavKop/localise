@@ -1,10 +1,28 @@
-@import "../../node_modules/normalize.css/normalize";
-@import "mixins/mixins";
-@import "presets/skins";
-@import "presets/variables";
-@import "common/fonts";
-@import "common/typography";
-@import "common/classes";
-@import "sections/header/header";
-@import "sections/header/navbar";
-@import "sections/main.scss"
+@use "../../node_modules/normalize.css/normalize";
+@use "mixins/mixins-media";
+@use "common/fonts";
+@use "common/typography";
+@use "common/classes";
+
+@use "sections/header/header";
+@use "sections/header/navbar";
+
+@use "sections/main/brands";
+@use "sections/main/job/control";
+@use "sections/main/job/time";
+@use "sections/main/job/quality";
+@use "sections/main/job/work";
+@use "sections/main/opportunities";
+@use "sections/main/boost";
+@use "sections/main/client-review";
+@use "sections/main/popular-soft";
+@use "sections/main/work-tools";
+@use "sections/main/offer";
+
+@use "sections/footer/footer.scss";
+@use "sections/footer/studies";
+@use "sections/footer/footer-nav/company.scss";
+@use "sections/footer/footer-nav/legal.scss";
+@use "sections/footer/footer-nav/product.scss";
+@use "sections/footer/footer-nav/support.scss";
+@use "sections/footer/rights";

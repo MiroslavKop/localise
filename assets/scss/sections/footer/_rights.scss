@@ -1,0 +1,49 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.rights {
+  padding-bottom: 50px;
+
+  font-size: 12px;
+  line-height: 15px;
+  .container--rights {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 50px;
+
+    border-top: 1px solid $color-black;
+
+    @include sm {
+      flex-direction: column;
+
+      gap: 20px;
+    }
+  }
+  .localise-rights {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+    @include sm {
+      align-items: center;
+      flex-direction: column;
+
+      text-align: center;
+    }
+  }
+  .localise-rights__description {
+    flex-basis: 340px;
+
+    @include sm {
+      flex-basis: 20px;
+    }
+  }
+  .copyright {
+    @include sm {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
