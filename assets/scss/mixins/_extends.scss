@@ -77,15 +77,24 @@
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
+
+  %job-action {
+    color: $color-black;
+    &:hover {
+      transition: 0.5s;
+      color: $color-accent;
+    }
+  }
 }
 %job-link {
   display: inline-block;
+  line-height: 20px;
 
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid $color-black;
   &:hover {
     transition: 0.25s;
 
-    border-bottom: 2px solid $color-accent;
+    border-bottom: 1px solid $color-accent;
   }
 }
 
@@ -93,6 +102,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  flex-basis: 25%;
 
   padding-top: 10px;
 

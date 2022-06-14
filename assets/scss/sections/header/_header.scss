@@ -8,8 +8,8 @@
 .header-content {
   display: grid;
 
-  padding-top: 160px;
-  padding-bottom: 80px;
+  padding-top: 220px;
+  padding-bottom: 170px;
 
   grid-template-areas: "ttl img" "ds img" "act img" "nt img";
   @include xl-min {
@@ -21,9 +21,11 @@
   @include lg {
     grid-template-areas: "ttl" "ds" "img" "act" "nt";
     grid-template-columns: 1fr;
+    padding-top: 150px;
+    padding-bottom: 80px;
   }
   @include md {
-    padding-top: 240px;
+    padding-top: 300px;
   }
   row-gap: $gap;
   &__title {

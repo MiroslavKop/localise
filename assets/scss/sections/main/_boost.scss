@@ -34,6 +34,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-basis: 33.3%;
 
     @include xl-min {
       align-items: flex-start;
@@ -66,14 +67,14 @@
       display: inline-block;
 
       color: $color-black;
-      border-bottom: 2px solid black;
+      border-bottom: 1px solid black;
 
       font-size: 20px;
-      line-height: 30px;
+      line-height: 20px;
       &:hover {
         transition: 0.25s;
 
-        border-bottom: 2px solid $color-accent;
+        border-bottom: 1px solid $color-accent;
       }
     }
   }

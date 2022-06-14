@@ -16,7 +16,7 @@
 
   padding-bottom: 95px;
 
-  gap: 80px;
+  gap: 140px;
   @include xl {
     flex-direction: column;
 
@@ -25,7 +25,7 @@
 }
 .footer-nav {
   display: flex;
-
+  flex-grow: 1;
   gap: 50px;
   @include xl-md {
     justify-content: space-around;

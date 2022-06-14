@@ -410,16 +410,26 @@ template {
   font-weight: 600;
   line-height: 1.5;
 }
+.work__btn .work__action, .quality__btn .work__action, .time__btn .work__action, .control__btn .work__action, .work__btn .quality__action, .quality__btn .quality__action, .time__btn .quality__action, .control__btn .quality__action, .work__btn .time__action, .quality__btn .time__action, .time__btn .time__action, .control__btn .time__action, .work__btn .control__action, .quality__btn .control__action, .time__btn .control__action, .control__btn .control__action {
+  color: #000000;
+}
+.work__btn .work__action:hover, .quality__btn .work__action:hover, .time__btn .work__action:hover, .control__btn .work__action:hover, .work__btn .quality__action:hover, .quality__btn .quality__action:hover, .time__btn .quality__action:hover, .control__btn .quality__action:hover, .work__btn .time__action:hover, .quality__btn .time__action:hover, .time__btn .time__action:hover, .control__btn .time__action:hover, .work__btn .control__action:hover, .quality__btn .control__action:hover, .time__btn .control__action:hover, .control__btn .control__action:hover {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: #ff6336;
+}
 
 .work__link, .quality__link, .time__link, .control__link {
   display: inline-block;
-  border-bottom: 2px solid black;
+  line-height: 20px;
+  border-bottom: 1px solid #000000;
 }
 .work__link:hover, .quality__link:hover, .time__link:hover, .control__link:hover {
   -webkit-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
-  border-bottom: 2px solid #ff6336;
+  border-bottom: 1px solid #ff6336;
 }
 
 .footer-nav__support, .footer-nav__product, .footer-nav__legal, .footer-nav__company {
@@ -433,6 +443,8 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   padding-top: 10px;
 }
 
@@ -518,7 +530,7 @@ h2 {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1380px;
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
@@ -568,8 +580,8 @@ h2 {
 
 .header-content {
   display: grid;
-  padding-top: 160px;
-  padding-bottom: 80px;
+  padding-top: 220px;
+  padding-bottom: 170px;
   grid-template-areas: "ttl img" "ds img" "act img" "nt img";
   row-gap: 20px;
 }
@@ -769,13 +781,14 @@ h2 {
 }
 .opportunities__content .opportunity-item__link {
   display: inline-block;
-  border-bottom: 2px solid black;
+  line-height: 20px;
+  border-bottom: 1px solid black;
 }
 .opportunities__content .opportunity-item__link:hover {
   -webkit-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
-  border-bottom: 2px solid #ff6336;
+  border-bottom: 1px solid #ff6336;
 }
 .opportunities__content .opportunity-item__picture {
   -webkit-box-ordinal-group: 0;
@@ -797,6 +810,8 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
 }
 .boost-item__title {
   color: #000000;
@@ -812,15 +827,15 @@ h2 {
 .boost-item__link {
   display: inline-block;
   color: #000000;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 20px;
 }
 .boost-item__link:hover {
   -webkit-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
-  border-bottom: 2px solid #ff6336;
+  border-bottom: 1px solid #ff6336;
 }
 .boost__image {
   min-height: 200px;
@@ -954,13 +969,16 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 95px;
-  gap: 80px;
+  gap: 140px;
 }
 
 .footer-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   gap: 50px;
 }
 
@@ -1406,6 +1424,8 @@ h2 {
   .header-content {
     grid-template-areas: "ttl" "ds" "img" "act" "nt";
     grid-template-columns: 1fr;
+    padding-top: 150px;
+    padding-bottom: 80px;
   }
   .header-content__description {
     text-align: center;
@@ -1503,7 +1523,7 @@ h2 {
     text-align: center;
   }
   .header-content {
-    padding-top: 240px;
+    padding-top: 300px;
   }
   .header-content__image {
     width: 70%;
