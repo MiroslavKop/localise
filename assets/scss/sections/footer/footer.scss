@@ -26,6 +26,7 @@
 .footer-nav {
   display: flex;
   flex-grow: 1;
+
   gap: 50px;
   @include xl-md {
     justify-content: space-around;

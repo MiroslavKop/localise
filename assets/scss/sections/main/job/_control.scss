@@ -2,6 +2,8 @@
 @use "../../../mixins" as *;
 
 .control {
+  margin-top: 80px;
+
   @extend %job-article;
 
   &__content {

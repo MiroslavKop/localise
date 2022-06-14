@@ -365,7 +365,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 100px;
+  margin-top: 250px;
   margin-bottom: 125px;
   gap: 20px;
 }
@@ -728,6 +728,10 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   gap: 40px 20px;
+}
+
+.control {
+  margin-top: 80px;
 }
 .time {
   -webkit-box-orient: horizontal;
@@ -1402,6 +1406,8 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 125px;
     text-align: center;
   }
   .work__title, .quality__title, .time__title, .control__title {
